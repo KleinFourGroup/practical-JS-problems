@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Matthew's Practical JS Problem Set 1</title>
+    <style type="text/css">
+        body {
+            margin: 40px auto;
+            max-width: 650px;
+            line-height: 1.6;
+            font-size: 18px;
+            color: #444;
+            padding: 0 10px
+        }
+
+        h1,
+        h2,
+        h3 {
+            line-height: 1.2
+        }
+
+        .centered {
+            text-align: center;
+        }
+
+        .output {
+            background-color: #444;
+            font-family: monospace;
+            color: greenyellow;
+            padding: 0 10px;
+            line-height: normal;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Matthew's Practical JS Problem Set 1</h1>
+    </header>
+    <p>
+        Solve the following problems. Your solutions should go in the attached
+        <code>script.js</code> file. You are free, and in fact expected and
+        encouraged, to use any and all resources at your disposal, including
+        reference manuals, documentation, tutorial videos, StackOverflow, and
+        Wikipedia. Googling is an important skill for software engineers!
+    </p>
+
+    <h2>Problem 1 &ndash; Input &amp; Output</h2>
+    <p>
+        This problem tests your ability to modify the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction">
+            DOM
+        </a> &ndash; that is, to modify the HTML of the page. You will need to
+        know how to retrieve, create, and append elements in the DOM; how to
+        add event listeners; and how to retrieve text from an input.
+    </p>
+    <p>
+        Modify <code>script.js</code> such that clicking on the button below
+        (which has id <code>p1button</code>) appends a paragraph containing
+        the text in the text box (id <code>p1text</code>) to the output
+        <code>div</code> (id <code>p1output</code>). If the text box is empty,
+        substitute in an error message.
+    </p>
+    <div class="centered">
+        <input id="p1text" type="text" size="10" placeholder="">
+        <button id="p1button" type="button">Submit</button>
+    </div>
+    <div class="output">
+        <p><b>Output</b></p>
+        <div id="p1output"></div>
+    </div>
+
+    <h2>Problem 2 &ndash; The Fibonacci Numbers</h2>
+    <p>
+        This problem tests your ability to implement (and, optionally,
+        optimize) a simple algorithm, sanatize inputs, and further manipulate
+        the DOM. You will need to know how to convert strings to numbers, how
+        to remove elements from the DOM, and how to write either iterative or
+        recursive functions.
+    </p>
+    <p>
+        The Fibonacci numbers <code>fib(n)</code> are a sequence of
+        non-negative integers defined as follows:
+    </p>
+    <ul>
+        <li><code>fib(0) = 0</code></li>
+        <li><code>fib(1) = 1</code></li>
+        <li><code>fib(n) = fib(n - 1) + fib(n - 2)</code>, for
+            <code>n</code> greater than one</li>
+    </ul>
+    <p>
+        The Fibonacci numbers are undefined for negative <code>n</code>.
+    </p>
+    <p>
+        Modify <code>script.js</code> such that clicking on the button
+        below (id <code>p2button</code>) appends a sequence of lines/paragraphs
+        containing <code>fib(0)</code> through <code>fib(n)</code>, where
+        <code>n</code> is given by the text in the text box (id
+        <code>p2text</code>), to the output <code>div</code> (id
+        <code>p2output</code>). If the specified <code>n</code> is negative or
+        not an integer, instead append an error message. Subsequent clicks
+        should refresh the contents of the output <code>div</code> rather than
+        append their output to previous outputs.
+    </p>
+    <div class="centered">
+        <input id="p2text" type="text" size="10" placeholder="">
+        <button id="p2button" type="button">Submit</button>
+    </div>
+    <div class="output">
+        <p><b>Output</b></p>
+        <div id="p2output"></div>
+    </div>
+    <h3 style="color: maroon;">Warning</h3>
+    <p>
+        The simplest algorithm for the Fibonacci numbers is exponentially slow
+        and may cause your browser to freeze or crash for <code>n</code>
+        slightly above 35. As an added <b>bonus challenge</b>, try to optimize
+        your solution such that this is not a problem.
+    </p>
+
+    <h2>Problem 3 &ndash; Typewriter</h2>
+    <p>
+        This problem tests your ability to manipulate strings, use callbacks,
+        and execute code after an interval of time. You will need to
+        know how to slice and append strings and how to schedule code
+        execution.
+    </p>
+    <p>
+        Modify <code>script.js</code> such that clicking on the button below
+        (id <code>p3button</code>) appends a paragraph containing the text in
+        the text box (id <code>p3text</code>) to the output <code>div</code>
+        (id <code>p3output</code>). The text should be added to the appended
+        paragraph one character at a time, once every half of a second.  If the
+        text box is empty, substitute in an error message.
+    </p>
+    <div class="centered">
+        <input id="p3text" type="text" size="10" placeholder="">
+        <button id="p3button" type="button">Submit</button>
+    </div>
+    <div class="output">
+        <p><b>Output</b></p>
+        <div id="p3output"></div>
+    </div>
+
+    <h2>Problem 4 &ndash; Drawing a Hexagon</h2>
+    <p>
+        This problem tests your ability to make graphical primatives. You will
+        need to know how to use the Canvas API as well as some trigonometry.
+    </p>
+    <p>
+        Modify <code>script.js</code> such that clicking on the button below
+        (id <code>p4button</code>) draws a regular hexagon of width 200 pixels
+        in a <code>canvas</code> element added to the output <code>div</code>
+        (id <code>p4output</code>). Subsequent clicks should not create a new
+        <code>canvas</code>.
+    </p>
+    <div class="centered">
+        <button id="p4button" type="button">Submit</button>
+    </div>
+    <div class="output">
+        <p><b>Output</b></p>
+        <div id="p4output" class="centered"></div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
